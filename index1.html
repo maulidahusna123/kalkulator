@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bungkus{
+            margin: 100px;
+            width: px;
+            height: 67px;
+            margin-left: 550px;
+        }
+        /* input[type=text], input[type=number], input[type=operator]{
+			width: 200px;
+			height: 25px;
+			padding-left: 10px;
+			border-radius: 3px;
+			border: 2px solid #ccc;
+			margin-bottom: 10px;
+		}  */
+    </style>
+</head>
+<body>
+    <form>
+    <div id="bungkus">
+        <h1>KALKULATOR SEDERHANA</h1>
+        <!-- <hr align="left" width="525px"><br> -->
+
+        <!-- <form id="forminputuser" name="forminputuser" action="" method="POST" target="_self" enctype="multipart/form-data"></form> -->
+        <label for="bilA">Bilangan-A :</label><br>
+        <input type="number" id="bilA" ><br>
+
+        <label for="bilB">Bilangan-B :</label><br>
+        <input type="number" id="bilB" ><br>
+
+        <label for="operator">Operator :</label><br>
+       <button onclick="tambah()">+</button>
+       <button onclick="kurang()">-</button>
+       <button onclick="kali()">x</button>
+       <button onclick="bagi()">/</button></br>
+
+       <label for="hasil">Hasil :</label><br>
+       <input type="text" id="hasil"><br>
+
+       <!-- <input type="button" name="hitung" value="hitung" onclick="hitung()"> -->
+       
+         
+
+    </div>
+    </form>
+ <script type="text/javascript">
+    function tambah(){
+        var nilai1 =document.getElementById("bilA").value;
+        var nilai2 = document.getElementById("bilB").value;
+        var nhasil = "";
+        if(nilai1== "" || nilai2=="" ){
+            nhasil = "";
+        }else{
+                nhasil = parseInt(nilai1)+parseInt(nilai2);
+            
+        }
+        document.getElementById("hasil").value = nhasil;
+    }
+    function kurang(){
+        var nilai1 =document.getElementById("bilA").value;
+        var nilai2 = document.getElementById("bilB").value;
+        var nhasil = "";
+        if(nilai1== "" || nilai2=="" ){
+            nhasil = "";
+        }else{
+                nhasil = parseInt(nilai1)-parseInt(nilai2);
+            
+        }
+        document.getElementById("hasil").value = nhasil;
+    }
+    function kali(){
+        var nilai1 =document.getElementById("bilA").value;
+        var nilai2 = document.getElementById("bilB").value;
+        var nhasil = "";
+        if(nilai1== "" || nilai2=="" ){
+            nhasil = "0";
+        }else{
+                nhasil = parseInt(nilai1)*parseInt(nilai2);
+            
+        }
+        document.getElementById("hasil").value = nhasil;
+    }
+    function bagi(){
+        var nilai1 =document.getElementById("bilA").value;
+        var nilai2 = document.getElementById("bilB").value;
+        var nhasil = "";
+        if(nilai1== "" || nilai2=="" ){
+            nhasil = "0";
+        }else{
+                nhasil = parseInt(nilai1)/parseInt(nilai2);
+            
+        }
+        document.getElementById("hasil").value = nhasil;
+    }
+
+ </script>   
+</body>
+</html>
